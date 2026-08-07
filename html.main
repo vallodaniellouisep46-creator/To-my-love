@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For My Love ❤️</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #120006,
+                    #450015,
+                    #160009
+                );
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Georgia, serif;
+
+            overflow-x: hidden;
+            overflow-y: auto;
+
+            padding: 30px 0;
+        }
+
+        /* MAIN CONTAINER */
+        .container {
+            width: 90%;
+            max-width: 650px;
+
+            text-align: center;
+
+            position: relative;
+            z-index: 5;
+        }
+
+        /* PHOTO */
+        .photo-box {
+            width: 100%;
+
+            border-radius: 25px;
+
+            overflow: hidden;
+
+            border: 3px solid white;
+
+            box-shadow:
+                0 0 20px #ff1744,
+                0 0 50px rgba(255, 23, 68, 0.6);
+
+            animation: glow 2s infinite alternate;
+        }
+
+        .photo-box img {
+            width: 100%;
+            display: block;
+        }
+
+        /* PHOTO GLOW */
+        @keyframes glow {
+
+            from {
+                box-shadow:
+                    0 0 15px #ff1744,
+                    0 0 30px rgba(255, 23, 68, 0.4);
+            }
+
+            to {
+                box-shadow:
+                    0 0 30px #ff1744,
+                    0 0 70px rgba(255, 23, 68, 0.9);
+            }
+        }
+
+        /* MESSAGE BOX */
+        .message {
+
+            margin-top: 25px;
+
+            padding: 30px 25px;
+
+            background: rgba(0, 0, 0, 0.4);
+
+            border-radius: 25px;
+
+            color: white;
+
+            box-shadow:
+                0 0 30px rgba(255, 20, 70, 0.3);
+
+            backdrop-filter: blur(5px);
+        }
+
+        /* TITLE */
+        .message h1 {
+
+            font-size: 38px;
+
+            margin-bottom: 25px;
+
+            color: white;
+
+            text-shadow:
+                0 0 10px #ff1744,
+                0 0 25px #ff1744;
+
+            animation: heartbeat 1.5s infinite;
+        }
+
+        /* HEARTBEAT */
+        @keyframes heartbeat {
+
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.08);
+            }
+        }
+
+        /* MESSAGE */
+        .emotional {
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            margin-bottom: 20px;
+
+            color: #fff0f3;
+
+            text-shadow:
+                0 0 5px rgba(255,255,255,0.3);
+        }
+
+        /* FOREVER MESSAGE */
+        .forever {
+
+            margin-top: 25px;
+
+            padding: 20px;
+
+            border-top:
+                1px solid rgba(255,255,255,0.3);
+
+            border-bottom:
+                1px solid rgba(255,255,255,0.3);
+
+            color: #ffb6c1;
+
+            font-size: 19px;
+
+            line-height: 1.7;
+        }
+
+        .forever b {
+
+            color: white;
+
+            text-shadow:
+                0 0 10px #ff1744,
+                0 0 20px #ff1744;
+        }
+
+        /* SIGNATURE */
+        .signature {
+
+            margin-top: 25px;
+
+            font-size: 18px;
+
+            font-style: italic;
+
+            color: #ff8fa3;
+        }
+
+        /* FLOATING HEARTS */
+        .heart {
+
+            position: fixed;
+
+            bottom: -40px;
+
+            pointer-events: none;
+
+            z-index: 10;
+
+            animation:
+                floatUp linear forwards;
+        }
+
+        @keyframes floatUp {
+
+            0% {
+
+                transform:
+                    translateY(0)
+                    scale(0.5)
+                    rotate(0deg);
+
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 1;
+            }
+
+            100% {
+
+                transform:
+                    translateY(-110vh)
+                    scale(1.5)
+                    rotate(360deg);
+
+                opacity: 0;
+            }
+        }
+
+        /* SMALL HEARTS AROUND PHOTO */
+        .heart-glow {
+
+            position: fixed;
+
+            font-size: 25px;
+
+            animation:
+                pulse 1.5s infinite;
+
+            z-index: 2;
+        }
+
+        @keyframes pulse {
+
+            0%, 100% {
+                transform: scale(1);
+                opacity: .5;
+            }
+
+            50% {
+                transform: scale(1.4);
+                opacity: 1;
+            }
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+
+            body {
+                padding: 20px 0;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .message {
+                padding: 25px 18px;
+            }
+
+            .message h1 {
+                font-size: 30px;
+            }
+
+            .emotional {
+                font-size: 16px;
+                line-height: 1.7;
+            }
+
+            .forever {
+                font-size: 17px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- MAIN CONTENT -->
+
+    <div class="container">
+
+        <!-- PHOTO -->
+
+        <div class="photo-box">
+
+            <img
+                src="couple.jpg"
+                alt="Our Beautiful Memory"
+            >
+
+        </div>
+
+
+        <!-- EMOTIONAL MESSAGE -->
+
+        <div class="message">
+
+            <h1>
+                ❤️ To My Love ❤️
+            </h1>
+
+
+            <p class="emotional">
+
+                I may not always know the perfect
+                words to say, but I hope you always
+                know how much you mean to me.
+
+                You are one of the most beautiful
+                parts of my life. ❤️
+
+            </p>
+
+
+            <p class="emotional">
+
+                Through the good days and the
+                difficult days, through the laughter
+                and the tears, I still want you
+                beside me.
+
+            </p>
+
+
+            <p class="emotional">
+
+                Thank you for staying, for
+                understanding, and for making
+                my life more meaningful.
+
+                If I could choose again,
+                I would still choose you.
+
+                <br>
+
+                <strong>
+                    Every single time. ❤️
+                </strong>
+
+            </p>
+
+
+            <div class="forever">
+
+                No matter what happens,
+
+                my heart will always have
+                a place for you.
+
+                <br><br>
+
+                <b>
+                    I love you today,
+                    tomorrow, and always. ❤️
+                </b>
+
+            </div>
+
+
+            <div class="signature">
+
+                Forever yours, ❤️
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        const hearts = [
+            "❤️",
+            "💕",
+            "💗",
+            "💖",
+            "💘",
+            "💓",
+            "💞",
+            "🥰",
+            "💝"
+        ];
+
+
+        function createHeart() {
+
+            const heart =
+                document.createElement("div");
+
+
+            heart.classList.add("heart");
+
+
+            // RANDOM HEART
+
+            heart.innerHTML =
+                hearts[
+                    Math.floor(
+                        Math.random() *
+                        hearts.length
+                    )
+                ];
+
+
+            // RANDOM POSITION
+
+            heart.style.left =
+                Math.random() * 100 + "vw";
+
+
+            // RANDOM SIZE
+
+            heart.style.fontSize =
+                (15 + Math.random() * 30) + "px";
+
+
+            // RANDOM SPEED
+
+            heart.style.animationDuration =
+                (4 + Math.random() * 5) + "s";
+
+
+            // ADD HEART
+
+            document.body.appendChild(heart);
+
+
+            // REMOVE HEART
+
+            setTimeout(() => {
+
+                heart.remove();
+
+            }, 9000);
+
+        }
+
+
+        // CREATE HEARTS
+
+        setInterval(
+            createHeart,
+            300
+        );
+
+
+        // CREATE SOME HEARTS IMMEDIATELY
+
+        for (let i = 0; i < 10; i++) {
+
+            setTimeout(
+                createHeart,
+                i * 200
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
